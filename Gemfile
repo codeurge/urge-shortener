@@ -32,6 +32,16 @@ gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
+gem 'figaro' # for storing in application.yml
+
+gem 'imgkit'
+gem 'carrierwave'
+gem "fog", "~> 1.3.1"
+gem 'mechanize'
+gem 'sidekiq'
+gem 'will_paginate', '~> 3.0'
+gem 'jquery-validation-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

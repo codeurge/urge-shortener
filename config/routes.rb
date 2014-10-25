@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  root 'home#index'
+  get '/all' => 'home#all'
+  get ':slug' => 'links#show'
+  resources :links
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
