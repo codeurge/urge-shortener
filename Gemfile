@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+gem 'nokogiri', '~> 1.6.0'
+
 gem 'pry' # for better development
 
 gem "therubyracer"
@@ -36,7 +38,6 @@ gem 'figaro' # for storing in application.yml
 
 gem 'imgkit'
 gem 'carrierwave'
-gem "fog", "~> 1.3.1"
 gem 'mechanize'
 gem 'sidekiq'
 gem 'will_paginate', '~> 3.0'
