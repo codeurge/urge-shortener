@@ -1,0 +1,17 @@
+.header.col-md-12
+  .logo.col-md-2
+    = link_to image_tag("logo.png"), "http://codeurge.com"
+.new-link
+  = form_for(@link, remote: true) do |f|
+    - if @link.errors.any?
+      #error_explanation
+        h2
+          = pluralize(@link.errors.count, "error")
+          ' 'prohibited this link from being saved:
+        ul
+        - @link.errors.full_messages.each do |msg|
+          li= msg
+    .shorten-input.col-md-6.col-md-offset-2
+      = f.text_field :given_url, :class => "form-control", :placeholder => "Paste a link to shorten"
+    .shorten-submit.col-md-2
+      = f.submit 'Shorten', :class => "btn btn-urge"
