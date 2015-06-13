@@ -1,4 +1,5 @@
 class Link < ActiveRecord::Base
+  validates_uniqueness_of :given_url
   after_create :generate_slug
 
   def generate_slug
@@ -14,5 +15,4 @@ class Link < ActiveRecord::Base
     ScreenshotWorker.perform_async(self.id)
     ScrapeWorker.perform_async(self.id)
   end
-
 end

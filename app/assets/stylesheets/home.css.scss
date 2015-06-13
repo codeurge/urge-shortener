@@ -29,5 +29,15 @@
     border-color: #c2c98f;
     height: 100px;
     font-size: 36px;
+    &:hover {
+      background: #c2c98f;
+      color: #1a1a1a;
+    }
   }
+}
+
+#link_given_url-error {
+  padding-top: 25px;
+  color: #d08356;
+  font-size: 16px;
 }

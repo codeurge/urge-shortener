@@ -18,7 +18,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    @link = Link.new(link_params)
+    @link = Link.find_or_create_by(link_params)
 
     respond_to do |format|
       if @link.save
